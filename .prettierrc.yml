@@ -1,0 +1,7 @@
+---
+  singleQuote: true
+  overrides:
+    -
+      files: ["*.json", "*.yml"]
+      options:
+        printWidth: 1100
