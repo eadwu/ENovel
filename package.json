@@ -2,6 +2,9 @@
   "name": "enovel",
   "version": "0.0.1",
   "license": "UNLICENSED",
+  "scripts": {
+    "clean": "git ls-files --ignored --others --exclude-standard | xargs -d '\\n' rm"
+  },
   "dependencies": {
     "commander": "^2.14.1"
   },
