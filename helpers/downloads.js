@@ -1,11 +1,11 @@
 const path = require('path')
 const HTTP = require('./http')
 
-const Constants = require('./constants')
 const FileSystem = require('./fs')
 const Parser = require('./parse')
-const Pandoc = require('./pandoc')
-const Tidy = require('./tidy')
+const Constants = require('../lib/constants')
+const Pandoc = require('../components/pandoc')
+const Tidy = require('../components/tidy')
 
 const { HOST, PATH } = Constants
 

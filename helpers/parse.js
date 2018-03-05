@@ -1,4 +1,4 @@
-const Constants = require('./constants')
+const Constants = require('../lib/constants')
 const { COVER, MATCH, REGEX, REPLACE, TITLE, TRANSLATOR } = Constants
 
 /**

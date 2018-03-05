@@ -1,8 +1,7 @@
 const fs = require('fs')
 const { spawn } = require('child_process')
 
-const FileSystem = require('./fs')
-
+const FileSystem = require('../helpers/fs')
 class Tidy {
   /**
    * Converts HTML code to XHTML code

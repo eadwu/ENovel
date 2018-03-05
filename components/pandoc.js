@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const { spawn } = require('child_process')
 
-const FileSystem = require('./fs')
+const FileSystem = require('../helpers/fs')
 
 class Pandoc {
   /**
