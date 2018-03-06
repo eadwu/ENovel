@@ -63,12 +63,15 @@ class Downloader {
    */
   static download (start, end, { source, novel, abbreviation }) {
     if (end < start) return 'Invalid query'
+    console.log('starting...')
     const delta = end - start + 1 // offset +1
     const cwd = path.resolve(__dirname, '..', 'out', abbreviation.toUpperCase())
 
     FileSystem.create(path.resolve(cwd, 'raw.html'))
+    console.log('download...')
     pRecurse(delta, i => {
       const currentChapter = start + i
+      console.log(`chapter ${currentChapter}...`)
 
       return new Promise((resolve, reject) => {
         HTTP.REQUEST(`${HOST[source]}${PATH[source]}${novel}/${abbreviation}-chapter-${currentChapter}`, 'GET')
@@ -87,9 +90,14 @@ class Downloader {
     }).then(async () => {
       const sourceFile = FileSystem.file.path
 
+      console.log('fetching metadata...')
       await getMetadata(cwd, { novel, source })
-      await Tidy.stream(sourceFile, path.resolve(cwd, 'converted.xhtml'))
-      await Pandoc.stream(FileSystem.file.path, path.resolve(cwd, `${novel}.epub`))
+      // console.log('converting to XHTML...')
+      // await Tidy.stream(sourceFile, path.resolve(cwd, 'converted.xhtml'))
+      // console.log('generating EPUB...')
+      // await Pandoc.stream(FileSystem.file.path, path.resolve(cwd, `${novel}.epub`))
+      console.log('done')
+      // process.exit()
     })
   }
 }
