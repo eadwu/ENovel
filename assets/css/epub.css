@@ -28,13 +28,12 @@
 
 body {
   font-family: Arvo;
-  font-size: 1.1em;
   font-weight: normal;
 }
 
 /* This defines styles and classes used in the book */
 body {
-  font-size: medium;
+  font-size: small;
   margin: 5%;
   text-align: justify;
 }
