@@ -11,7 +11,8 @@
     stage: build
     artifacts:
       expire_in: 1d
-      untracked: true
+      paths:
+        - out
     script:
       - ./enovel GRAVITY_TALES 403 the-trembling-world ttw
       - ./enovel GRAVITY_TALES 438 peerless-battle-spirit pbs
