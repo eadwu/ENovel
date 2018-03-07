@@ -92,12 +92,12 @@ class Downloader {
 
       console.log('fetching metadata...')
       await getMetadata(cwd, { novel, source })
-      // console.log('converting to XHTML...')
-      // await Tidy.stream(sourceFile, path.resolve(cwd, 'converted.xhtml'))
-      // console.log('generating EPUB...')
-      // await Pandoc.stream(FileSystem.file.path, path.resolve(cwd, `${novel}.epub`))
+      console.log('converting to XHTML...')
+      await Tidy.stream(sourceFile, path.resolve(cwd, 'converted.xhtml'))
+      console.log('generating EPUB...')
+      await Pandoc.stream(FileSystem.file.path, path.resolve(cwd, `${novel}.epub`))
       console.log('done')
-      // process.exit()
+      process.exit()
     })
   }
 }
