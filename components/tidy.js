@@ -27,7 +27,7 @@ class Tidy {
       input
         .pipe(tidy)
         .pipe(FileSystem.file)
-        .on('finish', () => {
+        .on('close', () => {
           resolve()
         })
     })
