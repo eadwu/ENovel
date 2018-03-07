@@ -39,7 +39,7 @@ Pandoc.defaultOptions = [
   '--toc',
   '--toc-depth=2',
   `--epub-stylesheet=${path.resolve(__dirname, '..', 'assets', 'css', 'epub.css')}`,
-  `--epub-embed-font=${path.resolve(__dirname, '..', 'assets', 'fonts', 'Arvo-*.woff2')}`,
+  `--epub-embed-font=${path.resolve(__dirname, '..', 'assets', 'fonts', 'Arvo-*.ttf')}`,
   '--epub-chapter-level=2'
 ]
 
