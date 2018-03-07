@@ -19,12 +19,7 @@ class Parser {
   static parse (blob, { source }) {
     const fixedBlob = Array.isArray(blob) ? blob.join('') : blob
     const matches = fixedBlob.match(REGEX[source])
-    return matches
-      ? matches[1]
-        .replace(MATCH[source], REPLACE[source])
-        .replace(/id=("chapterContent")/g, 'class=$1')
-        .replace(/style=".*?"/g, '')
-      : false
+    return matches ? matches[1].replace(MATCH[source], REPLACE[source]).replace(/<\s*(\w+).*?(>|\/>)/g, '<$1$2') : false
   }
   /**
    * Retrieve metadata by scraping HTML
