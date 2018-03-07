@@ -30,7 +30,7 @@ class Pandoc {
   }
 }
 
-Pandoc.command = 'pandoc'
+Pandoc.command = path.resolve(__dirname, '..', 'bin', 'pandoc')
 Pandoc.defaultOptions = [
   '-f',
   'html-native_divs',
