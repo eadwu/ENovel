@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+const program = require('commander')
+
+const pkg = require('./package.json')
+const Constants = require('./lib/constants')
+const Downloader = require('./helpers/download')
+
+const { SOURCE } = Constants
+
+const Defaults = {
+  min: 1
+}
+
+program
+  .version(pkg.version)
+  .usage('[options] <source> <max> <novel> <abbreviation>')
+  .option('--min [integer]', 'first chapter to download, defaults to 1')
+  .parse(process.argv)
+
+const parameters = program.min ? process.argv.slice(4) : process.argv.slice(2)
+
+if (parameters.length !== 4) {
+  console.log('Invalid amount of parameters')
+} else {
+  const [source, max, novel, abbreviation] = parameters
+
+  Downloader.download(program.min ? program.min : Defaults.min, max, {
+    source: SOURCE[source],
+    novel,
+    abbreviation
+  })
+}
