@@ -1,0 +1,23 @@
+---
+  image: node:latest
+
+  variables:
+    NODE_ENV: production
+
+  before_script:
+    - npm install
+
+  build:
+    stage: build
+    artifacts:
+      expire_in: 1d
+      untracked: true
+    script:
+      - ./enovel GRAVITY_TALES 403 the-trembling-world ttw
+      - ./enovel GRAVITY_TALES 438 peerless-battle-spirit pbs
+      - ./enovel GRAVITY_TALES 505 king-of-gods kog
+      - ./enovel --min 0 GRAVITY_TALES 812 way-of-choices ztj
+      - ./enovel GRAVITY_TALES 1132 chaotic-sword-god csg
+
+  stages:
+    - build
