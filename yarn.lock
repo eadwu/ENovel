@@ -569,12 +569,8 @@ has@^1.0.1:
     function-bind "^1.0.2"
 
 hosted-git-info@^2.1.4:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.5.0.tgz#6d60e34b3abbc8313062c3b798ef8d901a07af3c"
-
-htmltidy2@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/htmltidy2/-/htmltidy2-0.3.0.tgz#1edfb74b8cd530cdcdc29ef547c849a651f0870b"
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.6.0.tgz#23235b29ab230c576aab0d4f13fc046b0b038222"
 
 iconv-lite@^0.4.17:
   version "0.4.19"
