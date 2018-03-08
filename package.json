@@ -6,7 +6,8 @@
     "clean": "git ls-files --ignored --others --exclude-standard | xargs -d '\\n' rm"
   },
   "dependencies": {
-    "commander": "^2.14.1"
+    "commander": "^2.14.1",
+    "htmltidy2": "^0.3.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",

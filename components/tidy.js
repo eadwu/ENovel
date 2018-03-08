@@ -1,8 +1,17 @@
 const fs = require('fs')
-const path = require('path')
-const { spawn } = require('child_process')
 
+const htmltidy2 = require('htmltidy2')
 const FileSystem = require('../helpers/fs')
+
+const tidy = htmltidy2.createWorker({
+  wrap: 0,
+  indent: 0,
+  'output-xhtml': true,
+  'hide-comments': 'yes',
+  'vertical-space': 'auto',
+  'omit-optional-tags': 'yes'
+})
+
 class Tidy {
   /**
    * Converts the file `source` to XHTML in `destination` via `Streams`
@@ -11,33 +20,18 @@ class Tidy {
    * @return {Promise<undefined>} Promise which resolves when the stream is finished
    */
   static stream (source, destination) {
-    const options = [...Tidy.defaultOptions]
     return new Promise(resolve => {
       const input = fs.createReadStream(source)
-      const proc = spawn(Tidy.command, options)
 
       FileSystem.create(destination)
-      input.pipe(proc.stdin)
-      proc.stdout.pipe(FileSystem.file).on('finish', () => {
-        resolve()
-      })
+      input
+        .pipe(tidy)
+        .pipe(FileSystem.file)
+        .on('close', () => {
+          resolve()
+        })
     })
   }
 }
-
-Tidy.command = path.resolve(__dirname, '..', 'bin', 'tidy')
-Tidy.defaultOptions = [
-  '--indent',
-  '0',
-  '--wrap',
-  '0',
-  '--hide-comments',
-  'yes',
-  '--omit-optional-tags',
-  'yes',
-  '--vertical-space',
-  'auto',
-  '-asxhtml'
-]
 
 module.exports = Tidy
