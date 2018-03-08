@@ -12,14 +12,14 @@ class Pandoc {
    * @return {Promise<undefined>} Promise which resolves when the stream is finished
    */
   static stream (source, destination) {
-    const options = this.defaultOptions
+    const options = [...Pandoc.defaultOptions]
 
-    options.push(`--epub-cover-image=${path.resolve(path.dirname(source), 'cover.jpg')}`)
-    options.push(`--epub-metadata=${path.resolve(path.dirname(source), 'metadata.xml')}`)
+    options.push('--epub-cover-image', path.resolve(path.dirname(source), 'cover.jpg'))
+    options.push('--epub-metadata', path.resolve(path.dirname(source), 'metadata.xml'))
 
     return new Promise(resolve => {
       const input = fs.createReadStream(source)
-      const proc = spawn(this.command, this.defaultOptions)
+      const proc = spawn(Pandoc.command, options)
 
       FileSystem.create(destination)
       input.pipe(proc.stdin)
@@ -38,8 +38,10 @@ Pandoc.defaultOptions = [
   'epub3',
   '--toc',
   '--toc-depth=2',
-  `--epub-stylesheet=${path.resolve(__dirname, '..', 'assets', 'css', 'epub.css')}`,
-  `--epub-embed-font=${path.resolve(__dirname, '..', 'assets', 'fonts', 'Arvo-*.ttf')}`,
+  '--css',
+  path.resolve(__dirname, '..', 'assets', 'css', 'epub.css'),
+  '--epub-embed-font',
+  path.resolve(__dirname, '..', 'assets', 'fonts', 'Arvo-*.ttf'),
   '--epub-chapter-level=2'
 ]
 
