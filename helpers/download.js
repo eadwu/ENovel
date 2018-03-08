@@ -97,7 +97,6 @@ class Downloader {
       console.log('generating EPUB...')
       await Pandoc.stream(FileSystem.file.path, path.resolve(cwd, `${novel}.epub`))
       console.log('done')
-      process.exit()
     })
   }
 }
