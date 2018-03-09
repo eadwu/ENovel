@@ -34,7 +34,7 @@ async function pRecurse (n, func, i = 0) {
  * @return {Promise<undefined>} Default `Promise` returned from an `async` function
  */
 async function getMetadata (cwd, { novel, source }) {
-  const blob = await HTTP.REQUEST(`${HOST[source]}${PATH[source]}${novel}`, 'GET')
+  const blob = await HTTP.REQUEST(`${HOST[ source ]}${PATH[ source ]}${novel}`, 'GET')
   const metadata = Parser.retrieveMetadata(blob, { source })
   const imageSource = await HTTP.REQUEST(metadata.cover, 'GET', null)
 
@@ -74,7 +74,7 @@ class Downloader {
       console.log(`chapter ${currentChapter}...`)
 
       return new Promise((resolve, reject) => {
-        HTTP.REQUEST(`${HOST[source]}${PATH[source]}${novel}/${abbreviation}-chapter-${currentChapter}`, 'GET')
+        HTTP.REQUEST(`${HOST[ source ]}${PATH[ source ]}${novel}/${abbreviation}-chapter-${currentChapter}`, 'GET')
           .then(blob => {
             if (typeof blob === 'number') resolve(0) // Force exit success for 404
             const targetContent = Parser.parse(blob, { source })

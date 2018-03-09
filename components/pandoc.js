@@ -12,7 +12,7 @@ class Pandoc {
    * @return {Promise<undefined>} Promise which resolves when the stream is finished
    */
   static stream (source, destination) {
-    const options = [...Pandoc.defaultOptions]
+    const options = [ ...Pandoc.defaultOptions ]
 
     options.push('--epub-cover-image', path.resolve(path.dirname(source), 'cover.jpg'))
     options.push('--epub-metadata', path.resolve(path.dirname(source), 'metadata.xml'))

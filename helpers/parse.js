@@ -18,8 +18,8 @@ class Parser {
    */
   static parse (blob, { source }) {
     const fixedBlob = Array.isArray(blob) ? blob.join('') : blob
-    const matches = fixedBlob.match(REGEX[source])
-    return matches ? matches[1].replace(MATCH[source], REPLACE[source]).replace(/<\s*(\w+).*?(>|\/>)/g, '<$1$2') : false
+    const matches = fixedBlob.match(REGEX[ source ])
+    return matches ? matches[ 1 ].replace(MATCH[ source ], REPLACE[ source ]).replace(/<\s*(\w+).*?(>|\/>)/g, '<$1$2') : false
   }
   /**
    * Retrieve metadata by scraping HTML
@@ -30,9 +30,9 @@ class Parser {
    */
   static retrieveMetadata (blob, { source }) {
     const fixedBlob = Array.isArray(blob) ? blob.join('') : blob
-    const translator = fixedBlob.match(TRANSLATOR[source])[1]
-    const cover = fixedBlob.match(COVER[source])[1]
-    const title = fixedBlob.match(TITLE[source])[1]
+    const translator = fixedBlob.match(TRANSLATOR[ source ])[ 1 ]
+    const cover = fixedBlob.match(COVER[ source ])[ 1 ]
+    const title = fixedBlob.match(TITLE[ source ])[ 1 ]
 
     return {
       translator,
