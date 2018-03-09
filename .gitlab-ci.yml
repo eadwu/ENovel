@@ -49,7 +49,7 @@
       - ./enovel GRAVITY_TALES 287 the-world-online two
       - ./enovel GRAVITY_TALES 113 versatile-mage vm
       - ./enovel --min 0 GRAVITY_TALES 812 way-of-choices ztj
-      - ./enovel --min 13 GRAVITY_TALES 816 zhan-long sl
+      - ./enovel --min 13 GRAVITY_TALES 816 zhan-long zl
 
   stages:
     - build
