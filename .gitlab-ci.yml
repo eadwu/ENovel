@@ -14,7 +14,10 @@
       paths:
         - out
     script:
+      - ./enovel GRAVITY_TALES 208 reincarnation-of-the-strongest-sword-god rssg
+      - ./enovel GRAVITY_TALES 289 chaotic-lightning-cultivation clc
       - ./enovel GRAVITY_TALES 403 the-trembling-world ttw
+      - ./enovel --min 0 GRAVITY_TALES 435 immortal-and-martial-dual-cultivation imdc
       - ./enovel GRAVITY_TALES 438 peerless-battle-spirit pbs
       - ./enovel GRAVITY_TALES 505 king-of-gods kog
       - ./enovel --min 0 GRAVITY_TALES 812 way-of-choices ztj
