@@ -24,7 +24,7 @@ if (parameters.length !== 4) {
 } else {
   const [source, max, novel, abbreviation] = parameters
 
-  Downloader.download(program.min ? program.min : Defaults.min, max, {
+  Downloader.download(program.min ? parseInt(program.min, 10) : Defaults.min, max, {
     source: SOURCE[source],
     novel,
     abbreviation
