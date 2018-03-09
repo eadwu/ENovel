@@ -31,6 +31,7 @@ class FileSystem {
    */
   static create (filePath) {
     mkdirp(filePath)
+    if (file) file.end()
     file = fs.createWriteStream(filePath)
     return FileSystem
   }
