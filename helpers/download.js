@@ -36,7 +36,12 @@ async function pRecurse (n, func, i = 0) {
 async function getMetadata (cwd, { novel, source }) {
   const blob = await HTTP.REQUEST(`${HOST[ source ]}${PATH[ source ]}${novel}`, 'GET')
   const metadata = Parser.retrieveMetadata(blob, { source })
-  const imageSource = await HTTP.REQUEST(metadata.cover, 'GET', null)
+  const imageSource =
+    metadata.cover.substr(0, 2) === '//'
+      ? await HTTP.REQUEST(metadata.cover.substr(2), 'GET', null)
+      : metadata.cover.substr(0, 1) === '/'
+        ? await HTTP.REQUEST(`${HOST[ source ]}${metadata.cover}`, 'GET', null)
+        : await HTTP.REQUEST(metadata.cover, 'GET', null)
 
   FileSystem.create(path.resolve(cwd, 'cover.jpg')).write(Buffer.concat(imageSource))
   FileSystem.create(path.resolve(cwd, 'metadata.xml'))
