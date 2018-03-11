@@ -50,6 +50,8 @@
       - ./enovel GRAVITY_TALES 113 versatile-mage vm
       - ./enovel --min 0 GRAVITY_TALES 812 way-of-choices ztj
       - ./enovel --min 13 GRAVITY_TALES 816 zhan-long zl
+      - ./enovel WUXIAWORLD 1647 battle-through-the-heavens btth
+      - ./enovel WUXIAWORLD 1200 warlock-of-the-magus-world wmw
 
   stages:
     - build
