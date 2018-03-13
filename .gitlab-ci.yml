@@ -14,42 +14,19 @@
       paths:
         - out
     script:
-      - ./enovel GRAVITY_TALES 20 abyss-domination ad
-      - ./enovel --min 0 GRAVITY_TALES 237 age-of-adepts aoa
-      - ./enovel GRAVITY_TALES 89 a-mercenarys-war amw
-      - ./enovel GRAVITY_TALES 162 atypical-reincarnation ar
-      - ./enovel GRAVITY_TALES 430 beauty-and-the-bodyguard bab
+      - ./enovel GRAVITY_TALES 436 beauty-and-the-bodyguard bab
       - ./enovel GRAVITY_TALES 289 chaotic-lightning-cultivation clc
-      - ./enovel GRAVITY_TALES 1132 chaotic-sword-god csg
-      - ./enovel GRAVITY_TALES 278 demons-diary dd
-      - ./enovel --min 0 GRAVITY_TALES 206 era-of-disaster eod
-      - ./enovel GRAVITY_TALES 156 eternal-martial-sovereign ems
-      - ./enovel GRAVITY_TALES 400 godly-model-creator gmc
-      - ./enovel GRAVITY_TALES 47 golden-time gt
-      - ./enovel GRAVITY_TALES 310 hedonist-sovereign hs
-      - ./enovel --min 0 GRAVITY_TALES 36 hidden-assassin ha
-      - ./enovel --min 0 GRAVITY_TALES 435 immortal-and-martial-dual-cultivation imdc
-      - ./enovel GRAVITY_TALES 505 king-of-gods kog
-      - ./enovel GRAVITY_TALES 114 leveling-up-and-becoming-undefeatable lbu
-      - ./enovel GRAVITY_TALES 149 master-of-the-stars ms
-      - ./enovel GRAVITY_TALES 438 peerless-battle-spirit pbs
-      - ./enovel GRAVITY_TALES 86 phoenix-destiny pd
-      - ./enovel GRAVITY_TALES 208 reincarnation-of-the-strongest-sword-god rssg
-      - ./enovel GRAVITY_TALES 333 reincarnator reincarnator
-      - ./enovel --min 2 GRAVITY_TALES 374 returning-from-the-immortal-world rfiw
-      - ./enovel GRAVITY_TALES 155 rise-of-humanity roh
-      - ./enovel GRAVITY_TALES 95 rise-of-the-wasteland rotw
-      - ./enovel GRAVITY_TALES 638 shen-yin-wang-zuo sywz
-      - ./enovel GRAVITY_TALES 190 shrouding-the-heavens sth
-      - ./enovel --min 0 GRAVITY_TALES 712 shuras-wrath sw
-      - ./enovel GRAVITY_TALES 100 spirit-hunters-of-maoshan-sect shms
-      - ./enovel GRAVITY_TALES 233 the-black-card tbc
+      - ./enovel GRAVITY_TALES 1144 chaotic-sword-god csg
+      - ./enovel --min 0 GRAVITY_TALES 211 era-of-disaster eod
+      - ./enovel GRAVITY_TALES 410 godly-model-creator gmc
+      - ./enovel GRAVITY_TALES 517 king-of-gods kog
+      - ./enovel GRAVITY_TALES 452 peerless-battle-spirit pbs
+      - ./enovel --min 2 GRAVITY_TALES 380 returning-from-the-immortal-world rfiw
+      - ./enovel --min 0 GRAVITY_TALES 715 shuras-wrath sw
       - ./enovel GRAVITY_TALES 324 the-records-of-the-human-emperor rhe
-      - ./enovel GRAVITY_TALES 403 the-trembling-world ttw
-      - ./enovel GRAVITY_TALES 287 the-world-online two
-      - ./enovel GRAVITY_TALES 113 versatile-mage vm
-      - ./enovel --min 0 GRAVITY_TALES 812 way-of-choices ztj
-      - ./enovel --min 13 GRAVITY_TALES 816 zhan-long zl
+      - ./enovel GRAVITY_TALES 404 the-trembling-world ttw
+      - ./enovel --min 0 GRAVITY_TALES 826 way-of-choices ztj
+      - ./enovel --min 13 GRAVITY_TALES 817 zhan-long zl
       - ./enovel --min 0 WUXIAWORLD 1045 against-the-gods atg
       - ./enovel WUXIAWORLD 1443 ancient-strengthening-technique ast
       - ./enovel WUXIAWORLD 1647 battle-through-the-heavens btth
