@@ -50,7 +50,12 @@
       - ./enovel GRAVITY_TALES 113 versatile-mage vm
       - ./enovel --min 0 GRAVITY_TALES 812 way-of-choices ztj
       - ./enovel --min 13 GRAVITY_TALES 816 zhan-long zl
+      - ./enovel --min 0 WUXIAWORLD 1045 against-the-gods atg
+      - ./enovel WUXIAWORLD 1443 ancient-strengthening-technique ast
       - ./enovel WUXIAWORLD 1647 battle-through-the-heavens btth
+      - ./enovel WUXIAWORLD 2548 martial-god-asura mga
+      - ./enovel WUXIAWORLD 1503 martial-world mw
+      - ./enovel WUXIAWORLD 774 spirit-realm sr
       - ./enovel WUXIAWORLD 1200 warlock-of-the-magus-world wmw
 
   stages:
