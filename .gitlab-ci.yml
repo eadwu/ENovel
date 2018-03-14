@@ -14,26 +14,9 @@
       paths:
         - out
     script:
-      - ./enovel GRAVITY_TALES 436 beauty-and-the-bodyguard bab
-      - ./enovel GRAVITY_TALES 289 chaotic-lightning-cultivation clc
       - ./enovel GRAVITY_TALES 1144 chaotic-sword-god csg
-      - ./enovel --min 0 GRAVITY_TALES 211 era-of-disaster eod
-      - ./enovel GRAVITY_TALES 410 godly-model-creator gmc
-      - ./enovel GRAVITY_TALES 517 king-of-gods kog
-      - ./enovel GRAVITY_TALES 452 peerless-battle-spirit pbs
-      - ./enovel --min 2 GRAVITY_TALES 380 returning-from-the-immortal-world rfiw
-      - ./enovel --min 0 GRAVITY_TALES 715 shuras-wrath sw
-      - ./enovel GRAVITY_TALES 324 the-records-of-the-human-emperor rhe
-      - ./enovel GRAVITY_TALES 404 the-trembling-world ttw
-      - ./enovel --min 0 GRAVITY_TALES 826 way-of-choices ztj
-      - ./enovel --min 13 GRAVITY_TALES 817 zhan-long zl
-      - ./enovel --min 0 WUXIAWORLD 1045 against-the-gods atg
-      - ./enovel WUXIAWORLD 1443 ancient-strengthening-technique ast
-      - ./enovel WUXIAWORLD 1647 battle-through-the-heavens btth
       - ./enovel WUXIAWORLD 2548 martial-god-asura mga
       - ./enovel WUXIAWORLD 1503 martial-world mw
-      - ./enovel WUXIAWORLD 774 spirit-realm sr
-      - ./enovel WUXIAWORLD 1200 warlock-of-the-magus-world wmw
 
   stages:
     - build
