@@ -36,7 +36,6 @@ Pandoc.defaultOptions = [
   'html-native_divs',
   '-t',
   'epub3',
-  '--quiet',
   '--toc',
   '--toc-depth=2',
   '--css',
