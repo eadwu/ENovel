@@ -89,7 +89,7 @@ class Downloader {
             resolve(0)
           })
           .catch(err => {
-            reject(err)
+            console.error(err)
           })
       })
     }).then(async () => {
